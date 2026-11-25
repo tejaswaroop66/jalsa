@@ -1,6 +1,5 @@
 import os
 from tavily import TavilyClient
-from tavily_search import search_internet
 
 import ollama
 import platform
@@ -91,8 +90,8 @@ tools = [
                 "required": []
             }
         }
-    },
-
+    }
+]
 
 {
     "type": "function",
@@ -111,14 +110,12 @@ tools = [
         }
     }
 }
-]
 # 3. Map tool names to Python functions
 
 available_functions = {
     "get_system_info": get_system_info,
     "get_current_time": get_current_time,
-    "get_disk_usage": get_disk_usage,
-    "search_internet": search_internet
+    "get_disk_usage": get_disk_usage
 }
 
 
